@@ -31,7 +31,7 @@ const Welcome = () => {
         <p className="text-lg md:text-xl text-slate-500 mb-10 max-w-2xl mx-auto leading-relaxed">
           Platform Sistem Pendukung Keputusan dengan metode{" "}
           <strong className="text-slate-700">VIKOR</strong>. Bantu Anda
-          menemukan solusi terbaik yang objektif, cepat, dan akurat.
+          menemukan solusi terbaik yang objektif dengan cepat dan akurat.
         </p>
 
         {/* Call to Action */}
