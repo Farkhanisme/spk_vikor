@@ -216,33 +216,34 @@ const AlternatifPage = () => {
         },
       ];
 
-const mapping = {
-      "C1": "Harga",
-      "C2": "Jumlah Shade",
-      "C3": "Ketahanan",
-      "C4": "Pigmentasi"
-    };
-
-    const initialized = defaultData.map((alt) => {
-      const newValues = {};
-      
-      criteria.forEach((c) => {
-        const legacyKey = mapping[c.id]; // Ambil "Harga", "Ketahanan", dll berdasarkan ID
-        
-        if (legacyKey) {
-          // Jika ini adalah kriteria bawaan (C1-C4), ambil dari defaultData
-          newValues[c.id] = alt.values[legacyKey] || 0;
-        } else {
-          // Jika ini kriteria baru yang ditambah user (ID custom), beri nilai 0
-          newValues[c.id] = 0;
-        }
-      });
-
-      return { 
-        id: generateId(), 
-        name: alt.name, 
-        values: newValues 
+      const mapping = {
+        C1: "Harga",
+        C2: "Jumlah Shade",
+        C3: "Ketahanan",
+        C4: "Pigmentasi",
       };
+
+      const initialized = defaultData.map((alt) => {
+        const newValues = {};
+
+        criteria.forEach((c) => {
+          const legacyKey = mapping[c.id]; // Ambil "Harga", "Ketahanan", dll berdasarkan ID
+
+          if (legacyKey) {
+            // Jika ini adalah kriteria bawaan (C1-C4), ambil dari defaultData
+            newValues[c.id] = alt.values[legacyKey] || 0;
+          } else {
+            // Jika ini kriteria baru yang ditambah user (ID custom), beri nilai 0
+            newValues[c.id] = 0;
+          }
+        });
+
+        return {
+          id: generateId(),
+          name: alt.name,
+          values: newValues,
+        };
+      });
       setAlternatives(initialized);
     }
   }, [criteria]);
