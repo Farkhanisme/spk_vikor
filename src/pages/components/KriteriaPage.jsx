@@ -13,12 +13,13 @@ const KriteriaPage = () => {
   const navigate = useNavigate();
 
   // State untuk kriteria (dengan data bawaan)
-  const [criteria, setCriteria] = useState([
-    { id: Date.now(), name: "Harga", weight: 0.3, type: "cost" },
-    { id: Date.now() + 1, name: "Jumlah Shade", weight: 0.3, type: "benefit" },
-    { id: Date.now() + 2, name: "Ketahanan", weight: 0.2, type: "benefit" },
-    { id: Date.now() + 3, name: "Pigmentasi", weight: 0.2, type: "benefit" },
-  ]);
+  // State untuk kriteria dengan ID Permanen
+const [criteria, setCriteria] = useState([
+  { id: "C1", name: "Harga", weight: 0.3, type: "cost" },
+  { id: "C2", name: "Jumlah Shade", weight: 0.3, type: "benefit" },
+  { id: "C3", name: "Ketahanan", weight: 0.2, type: "benefit" },
+  { id: "C4", name: "Pigmentasi", weight: 0.2, type: "benefit" },
+]);
 
   const [isValidated, setIsValidated] = useState(false);
   const [totalWeight, setTotalWeight] = useState(0);
