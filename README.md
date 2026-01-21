@@ -1,5 +1,6 @@
 # SPK Metode Vikor
 Github ini berisi project Sistem Pendukung Keputusan berbasis Web dengan menggunakan metode Vikor
+Sistem ini memberikan solusi yang cepat untuk user dalam melakukan pengambilan keputusan yang objektif, sistem ini bisa langsung digunakan tanpa harus login terlebih dahulu karena menggunakan local storage yang memungkinkan user untuk mengedit dan menambahkan kriteria atau alternatif secara langsung
 
 ## Dosen Pembimbing
 Hidayatus Sibyan, S.Kom., M.Kom.
